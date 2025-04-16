@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>PERFECT DOG STORE</title>
+        <title>Marten - Modèle eCommerce Bootstrap 5 pour Aliments pour Animaux</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
@@ -22,31 +22,28 @@
         <script src="{{ asset('assets/js/vendor/modernizr-3.11.7.min.js') }}"></script>
     </head>
     <body>
-
-    {% for animal in animalList %}
- {{ animal.name }}
-    {% endfor %}
         <header class="header-area">
             <div class="header-top theme-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-12">
                             <div class="welcome-area">
-                                <p>Bienvenue sur perfect-dog-store ! </p>
+                                <p>Bienvenue sur Perfect-dog-store  ! </p>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-8 col-12">
                             <div class="account-curr-lang-wrap f-right">
                                 <ul>
-                                    <li class="top-hover"><a href="#">Euro (EU) <i class="icon-arrow-down"></i></a>
+                                    <li class="top-hover"><a href="#">Euro (EU)<i class="icon-arrow-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Dollar (US)</a></li>
+                                            <li><a href="#">$Dollar (US)</a></li>
+
                                         </ul>
                                     </li>
                                     <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/fr.jpg') }}"> Français  <i class="icon-arrow-down"></i></a>
                                         <ul>
                                             <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/en.jpg') }}">Anglais </a></li>
-                                       </ul>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -59,24 +56,21 @@
                     <div class="row">
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
                             <div class="logo pt-39">
-                                <a href="index.php"><img alt="" src="{{ asset('assets/img/logo/logo.png') }}"></a>
+                                <a href="index.html"><img alt="" src="{{ asset('assets/img/logo/logo.png') }}"></a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-7 d-none d-lg-block relative">
                             <div class="main-menu text-center">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.php">ACCUEIL</a>
-
-                                        <li class="mega-menu-position"><a href="/shop-page">Nourriture</a>
-
+                                        <li><a href="{{ path('app_home') }}">ACCUEIL</a>
+                                            
                                         </li>
-
-                                        <li class="mega-menu-position"><a href="/shop-page">Accessoires</a>
-
+                                        <li class="mega-menu-position"><a href="{{ path('app_shop_details') }}">Nourriture</a>
+                                           
                                         </li>
-
-
+                                        
+                                        
                                         <li><a href="about-us.html">À PROPOS</a></li>
                                         <li><a href="contact.html">contactez-nous</a></li>
                                     </ul>
@@ -192,26 +186,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-<li><a href="#">Nourriture</a>
-    <ul>
-        {% for categorie in categorieList %}
-            <li><a href="#">{{ categorie.name }}</a>
-                <ul>
-                    {% for produit in categorie.produits %}
-                        <li><a href="shop-page.html">{{ produit.name }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
-        {% endfor %}
-    </ul>
-</li>
-
                                         <li><a href="#">Nourriture</a>
                                             <ul>
-
-                                            
-
-
                                                 <li><a href="#">Nourriture pour Chiens</a>
                                                     <ul>
                                                         <li><a href="shop-page.html">Raisins et Grapes</a></li>
@@ -239,9 +215,6 @@
                                                         <li><a href="shop-page.html">Culture</a></li>
                                                     </ul>
                                                 </li>
-
-
-
                                             </ul>
                                         </li>
                                         <li><a href="#">blog</a>
@@ -310,6 +283,7 @@
                 </div>
             </div>
         </div>
+
         <div class="food-category food-category-col pt-100 pb-60">
             <div class="container">
                 <div class="row">
@@ -326,7 +300,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="single-food-category cate-padding-2 text-center mb-30">
                             <div class="single-food-hover-2">
-                                <img src="{{ asset('assets/img/product/product-2.jpg') }}" alt="">
+                                <img src="{{ asset('assets/img/product/a-venir.png') }}" alt="">
                             </div>
                             <div class="single-food-content">
                                 <h3>Nourriture pour Chats</h3>
@@ -336,7 +310,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="single-food-category cate-padding-3 text-center mb-30">
                             <div class="single-food-hover-2">
-                                <img src="{{ asset('assets/img/product/product-3.jpg') }}" alt="">
+                                <img src="{{ asset('assets/img/product/a-venir.png') }}" alt="">
                             </div>
                             <div class="single-food-content">
                                 <h3>Nourriture pour Poissons</h3>
@@ -346,246 +320,83 @@
                 </div>
             </div>
         </div>
-        
-        <div class="product-area pt-95 pb-70 gray-bg">
-            <div class="container">
-                <div class="section-title text-center mb-55">
-                <!--    <h4>Les plus populaires</h4> -->
-                    <h2>Produits Récents</h2>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="product-wrapper mb-10">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img src="{{ asset('assets/img/product/product-4.jpg') }}" alt="">
-                                </a>
-                                <div class="product-action">
-                                    <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                    <a title="Ajouter au Panier" href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                    </a>
-                                </div>
-                                <div class="product-action-wishlist">
-                                    <a title="Liste de souhaits" href="#">
-                                        <i class="ti-heart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Nourriture Calcium pour Chien</a></h4>
-                                <div class="product-price">
-                                    <span class="new">20,00€ </span>
-                                    <span class="old">50,00€</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="product-wrapper mb-10">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img src="{{ asset('assets/img/product/product-5.jpg') }}" alt="">
-                                </a>
-                                <div class="product-action">
-                                    <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                    <a title="Ajouter au Panier" href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                    </a>
-                                </div>
-                                <div class="product-action-wishlist">
-                                    <a title="Liste de souhaits" href="#">
-                                        <i class="ti-heart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Nourriture Buffalo pour Chat</a></h4>
-                                <div class="product-price">
-                                    <span class="new">22,00€ </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="product-wrapper mb-10">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img src="{{ asset('assets/img/product/product-6.jpg') }}" alt="">
-                                </a>
-                                <div class="product-action">
-                                    <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                    <a title="Ajouter au Panier" href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                    </a>
-                                </div>
-                                <div class="product-action-wishlist">
-                                    <a title="Liste de souhaits" href="#">
-                                        <i class="ti-heart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Nourriture Legacy pour Chien</a></h4>
-                                <div class="product-price">
-                                    <span class="new">50,00€ </span>
-                                    <span class="old">70,00€</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="product-wrapper mb-10">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img src="{{ asset('assets/img/product/product-7.jpg') }}" alt="">
-                                </a>
-                                <div class="product-action">
-                                    <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                    <a title="Ajouter au Panier" href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                    </a>
-                                </div>
-                                <div class="product-action-wishlist">
-                                    <a title="Liste de souhaits" href="#">
-                                        <i class="ti-heart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Nourriture Sèche au Poulet pour Chat</a></h4>
-                                <div class="product-price">
-                                    <span class="new">60,00€ </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="product-wrapper mb-10">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img src="{{ asset('assets/img/product/product-8.jpg') }}" alt="">
-                                </a>
-                                <div class="product-action">
-                                    <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                    <a title="Ajouter au Panier" href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                    </a>
-                                </div>
-                                <div class="product-action-wishlist">
-                                    <a title="Liste de souhaits" href="#">
-                                        <i class="ti-heart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Nourriture pour l'Estomac du Chien</a></h4>
-                                <div class="product-price">
-                                    <span class="new">70,00€ </span>
-                                    <span class="old">90,00€</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="product-wrapper mb-10">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img src="{{ asset('assets/img/product/product-9.jpg') }}" alt="">
-                                </a>
-                                <div class="product-action">
-                                    <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                    <a title="Ajouter au Panier" href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                    </a>
-                                </div>
-                                <div class="product-action-wishlist">
-                                    <a title="Liste de souhaits" href="#">
-                                        <i class="ti-heart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Nourriture pour Chiot Nourish</a></h4>
-                                <div class="product-price">
-                                    <span class="new">80,00€ </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="product-wrapper mb-10">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img src="{{ asset('assets/img/product/product-10.jpg') }}" alt="">
-                                </a>
-                                <div class="product-action">
-                                    <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                    <a title="Ajouter au Panier" href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                    </a>
-                                </div>
-                                <div class="product-action-wishlist">
-                                    <a title="Liste de souhaits" href="#">
-                                        <i class="ti-heart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Nourriture Tarpaulin pour Chien</a></h4>
-                                <div class="product-price">
-                                    <span class="new">10,00€ </span>
-                                    <span class="old">30,00€</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="product-wrapper mb-10">
-                            <div class="product-img">
+<div class="product-area pt-95 pb-70 gray-bg">
+    <div class="container">
+        <div class="section-title text-center mb-55">
+           <!-- <h4>Les plus populaires</h4> -->
+            <h2>Produits Récents</h2>
+        </div>
+        <div class="row">
+            {% for produit in produitList %}
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="product-wrapper mb-10">
+                        <div class="product-img">
                                 <a href="product-details.html">
                                     <img src="{{ asset('assets/img/product/product-11.jpg') }}" alt="">
+                            </a>
+                            <div class="product-action">
+                                <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                                    <i class="ti-plus"></i>
                                 </a>
-                                <div class="product-action">
-                                    <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i>
-                                    </a>
-                                    <a title="Ajouter au Panier" href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                    </a>
-                                </div>
-                                <div class="product-action-wishlist">
-                                    <a title="Liste de souhaits" href="#">
-                                        <i class="ti-heart"></i>
-                                    </a>
-                                </div>
+                                <a title="Ajouter au Panier" href="#">
+                                    <i class="ti-shopping-cart"></i>
+                                </a>
                             </div>
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Nourriture Calcium pour Chien</a></h4>
-                                <div class="product-price">
-                                    <span class="new">22,00€ </span>
-                                </div>
+                            <div class="product-action-wishlist">
+                                <a title="Liste de souhaits" href="#">
+                                    <i class="ti-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h4><a href="product-details.html">{{ produit.name }}</a></h4>
+                            <div class="product-price">
+                                <span class="new">{{ produit.prix }}€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="deal-area bg-img pt-95 pb-100">
+            <div class="container">
+                <div class="section-title text-center mb-50">
+                    <h4>Meilleur Produit</h4>
+                    <h2>Offre de la Semaine</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="deal-img wow fadeInLeft">
+                            <a href="#"><img src="{{ asset('assets/img/banner/banner-2.png') }}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="deal-content">
+                            <h3><a href="#">Nommez Votre Produit</a></h3>
+                            <div class="deal-pro-price">
+                                <span class="deal-old-price">16,00€ </span>
+                                <span> 10,00€</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, co adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita ullamco laboris nisi ut aliquip ex ea commodo </p>
+                            <div class="timer timer-style">
+                                <div data-countdown="2023/10/01"></div>
+                            </div>
+                            <div class="discount-btn mt-35">
+                                <a class="btn-style" href="#">ACHETER MAINTENANT</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        -->
 		<div class="testimonial-area pt-90 pb-70 bg-img" style="background-image:url({{ asset('assets/img/banner/banner-1.jpg') }});">
 		    <div class="container">
                 <div class="row">
@@ -593,7 +404,7 @@
                         <div class="testimonial-wrap">
                             <div class="testimonial-text-slider text-center">
                                 <div class="sin-testiText">
-                                    <p>Lorem ipsum dolor sit amet, co adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
                                 </div>
                                 <div class="sin-testiText">
                                     <p>Il existe de nombreuses variations de passages de Lorem Ipsum, mais la majorité a subi une altération sous une forme ou une autre, par injection d'humour ou par des mots aléatoires qui ne ressemblent pas à une vraie langue.... </p>
@@ -662,7 +473,66 @@
 		        </div>
 		    </div>
 		</div>
-		
+        <!--
+		<div class="blog-area pb-70">
+		    <div class="container">
+		        <div class="section-title text-center mb-60">
+                    <h4>Dernières Nouvelles</h4>
+                    <h2>De Notre Blog</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-wrapper mb-30 gray-bg">
+                            <div class="blog-img hover-effect">
+                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-1.jpg') }}"></a>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <ul>
+                                        <li>Par: <span>Admin</span></li>
+                                        <li>14 Sep, 2018</li>
+                                    </ul>
+                                </div>
+                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-wrapper mb-30 gray-bg">
+                            <div class="blog-img hover-effect">
+                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-2.jpg') }}"></a>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <ul>
+                                        <li>Par: <span>Admin</span></li>
+                                        <li>14 Sep, 2018</li>
+                                    </ul>
+                                </div>
+                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-wrapper mb-30 gray-bg">
+                            <div class="blog-img hover-effect">
+                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-3.jpg') }}"></a>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <ul>
+                                        <li>Par: <span>Admin</span></li>
+                                        <li>14 Sep, 2018</li>
+                                    </ul>
+                                </div>
+                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		    </div>
+		</div>
+        -->
 		<footer class="footer-area">
             <div class="footer-top pt-80 pb-50 gray-bg-2">
                 <div class="container">
@@ -675,14 +545,12 @@
                                             <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="">
                                         </a>
                                     </div>
-                                    <p>Découvrez une gamme complète de nourriture de qualité pour vos animaux de compagnie, spécialement conçue pour répondre à leurs besoins nutritionnels.</p>
+                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
                                     <div class="social-icon">
                                         <ul>
                                             <li><a href="#"><i class="icon-social-twitter"></i></a></li>
                                             <li><a href="#"><i class="icon-social-instagram"></i></a></li>
                                             <li><a href="#"><i class="icon-social-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="icon-social-skype"></i></a></li>
-                                            <li><a href="#"><i class="icon-social-dribbble"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -714,7 +582,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                     </div>
                 </div>
             </div>
@@ -723,7 +591,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="copyright text-center">
-                                <p>Copyright © <a href="#">PerfectDogStore.</a> Tous droits réservés.</p>
+                                <p>Copyright © <a href="#">Perfect-dog-store.</a> Tous droits réservés.</p>
                             </div>
                         </div>
                     </div>
@@ -769,7 +637,6 @@
                                 <h3>Nourriture Calcium pour Chien</h3>
                                 <div class="product-price">
                                     <span class="new">20,00€ </span>
-                                    <span class="old">50,00€</span>
                                 </div>
                                 <div class="product-rating">
                                     <i class="icon-star theme-color"></i>

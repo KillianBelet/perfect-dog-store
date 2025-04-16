@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\AnimalRepository;
 use Doctrine\ORM\Mapping as ORM;
-use App\Entity\Categorie;
 
 #[ORM\Entity(repositoryClass: AnimalRepository::class)]
 class Animal
@@ -14,11 +13,9 @@ class Animal
     #[ORM\Column]
     private ?int $id = null;
 
-
-
-
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 25)]
     private ?string $name = null;
+
 
     public function getId(): ?int
     {

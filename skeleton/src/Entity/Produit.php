@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\ProduitRepository;
-use DateTime;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -15,7 +14,7 @@ class Produit
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 20)]
+    #[ORM\Column(length: 25)]
     private ?string $name = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -24,16 +23,19 @@ class Produit
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $composition = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?float $prix = null;
+    #[ORM\Column(type: Types::FLOAT, nullable: true)]
+    private $prix = null;
+
+    
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $createdAt = null;
 
     #[ORM\ManyToOne(targetEntity: Categorie::class, inversedBy: 'produits')]
     #[ORM\JoinColumn(nullable: false)]
-    private $categorie = null;
+    private ?Categorie $categorie = null;
 
-    #[ORM\Column(nullable: true, type: 'datetime')]
-    private $createdAt = null;
-
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $thumbnail = null;
 
     public function getId(): ?int
     {
@@ -88,12 +90,12 @@ class Produit
         return $this;
     }
 
-    public function getCreatedAt()
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
-    public function setCreatedAt($createdAt): static
+    public function setCreatedAt(?\DateTimeInterface $createdAt): static
     {
         $this->createdAt = $createdAt;
 
@@ -108,6 +110,18 @@ class Produit
     public function setCategorie(?Categorie $categorie): static
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getThumbnail(): ?string
+    {
+        return $this->thumbnail;
+    }
+
+    public function setThumbnail(?string $thumbnail): static
+    {
+        $this->thumbnail = $thumbnail;
 
         return $this;
     }
