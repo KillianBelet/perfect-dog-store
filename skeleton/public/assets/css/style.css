@@ -684,7 +684,7 @@ textarea:focus {
     padding-top: 37px
 }
 .pt-39 {
-    padding-top: 39px
+    padding-top: 29px
 }
 .pt-40 {
     padding-top: 40px
@@ -1576,7 +1576,7 @@ textarea:focus {
 }
 
 /* header bottom */
-.stick .logo.pt-39 {
+.stick .logo.pro {
     padding-top: 23px;
 }
 .main-menu li {
@@ -2124,7 +2124,7 @@ button.icon-cart span.count-style {
     overflow: hidden;
 }
 .product-img img {
-    width: 100%;
+    width: 70%;
     transition: all .7s ease 0s;
 }
 .product-action {
