@@ -4,17 +4,20 @@ namespace App\Controller;
 
 use App\Repository\CategorieRepository;
 use App\Repository\ProduitRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpFoundation\Request;
+use App\Entity\Produit;
 
 final class HomeController extends AbstractController
 {
     public function __Construct(private CategorieRepository $categorieRepository,
     private ProduitRepository $produitRepository,
-    private PaginatorInterface $paginator ){
+    private PaginatorInterface $paginator,
+    private EntityManagerInterface $entityManager ){
 
     }
 
@@ -51,7 +54,7 @@ final class HomeController extends AbstractController
         $pagination = $this->paginator->paginate(
             $produits,
             $request->query->getInt('page', 1),
-            12 // Nombre d'éléments par page
+            12
         );
 
 
@@ -72,7 +75,7 @@ final class HomeController extends AbstractController
         $pagination = $this->paginator->paginate(
             $produits,
             $request->query->getInt('page', 1),
-            12 // Nombre d'éléments par page
+            12
         );
 
         return $this->render('home/shopDetails.html.twig', [
@@ -80,4 +83,39 @@ final class HomeController extends AbstractController
             'categorieList' => $categories
         ]);
     }
+
+    
+    #[Route('/panier', name: 'app_panier')]
+    public function panierr(): Response
+    {
+
+       $categorieRepository = $this->categorieRepository->findAll();
+       $produitRepository = $this->produitRepository->findLatestProducts();
+
+
+        return $this->render('home/panier.html.twig', [
+            'controller_name' => 'HomeController',
+            'produitList' => $produitRepository,
+            'categorieList' => $categorieRepository
+        ]);
+    }
+
+    #[Route("/get-produit-details/{id}", name: 'get_produit_details', methods:"GET")]
+    public function getProduitDetails(Produit $produit): Response
+    {
+        // Récupérer les détails du produit à partir de son ID
+        $produit = $this->entityManager->getRepository(Produit::class)->find($produit->getId());
+
+        if (!$produit) {
+            throw $this->createNotFoundException('Produit non trouvé.');
+        }
+
+        return $this->json([
+            'name' => $produit->getName(),
+            'image' => $produit->getThumbnail(),
+            'prix' => $produit->getPrix(),
+            'description' => $produit->getDescription(),
+        ]);
+    }
+
 }
