@@ -1325,7 +1325,7 @@ textarea:focus {
     background: #282829
 }
 .theme-bg {
-    background: #7e4c4f;
+    background: #3e3e3e;
 }
 .theme-bg-2 {
     background: #f2e6d6;
@@ -1337,10 +1337,10 @@ textarea:focus {
     background: #f3f3f3;
 }
 .gray-bg-3 {
-    background: #e0e0e0;
+    background: #3e3e3e;
 }
 .yellow-bg {
-    background: #ffe4b3;
+    background: #ff9900;
 }
 .transparent-bg {
     background: transparent;
@@ -1594,7 +1594,7 @@ textarea:focus {
     text-transform: uppercase;
 }
 .main-menu li:hover>a {
-    color: #7e4c4f;
+    color: #ff9900;
 }
 .main-menu ul li.mega-menu-position {
     position: static;
@@ -1681,6 +1681,9 @@ textarea:focus {
 .stick .logo.pt-25 {
     padding-top: 12px;
 }
+.stick .logo.pt-39{
+    padding-top: 15px;
+}
 .stick .search-login-cart-wrapper {
     padding: 30px 0 0;
 }
@@ -1723,7 +1726,7 @@ textarea:focus {
 
 /* header cart */
 button.icon-cart span.count-style {
-    background-color: #7e4c4f;
+    background-color: #ff9900;
     border-radius: 100%;
     color: #fff;
     display: inline-block;
@@ -1924,6 +1927,10 @@ button.icon-cart span.count-style {
 .header-search .search-content form button i {
     font-size: 15px;
 }
+/*header-bottom */
+.header-bottom{
+    background-color: #FFF;
+}
 
 /* slider */
 .slider-content h3 {
@@ -2052,10 +2059,10 @@ button.icon-cart span.count-style {
     z-index: 99;
 }
 .single-food-content > h3 {
-    background-color: #fff;
+    background-color: #3e3e3e;
     border-radius: 50px;
     box-shadow: 0 0.3px 7px rgba(0, 0, 0, 0.2);
-    color: #000101;
+    color: #fff;
     display: inline-block;
     font-family: "Pacifico", cursive;
     font-size: 30px;
