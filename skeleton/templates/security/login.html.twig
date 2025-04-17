@@ -174,40 +174,59 @@
                             </div>
                             <div class="tab-content">
                                 <div id="lg1" class="tab-pane active">
-                                    <div class="login-form-container">
-                                        <div class="login-register-form">
-                                            {% if error %}
-                                                <div class="alert alert-danger">{{ error.messageKey }}</div>
-                                            {% endif %}
-                                            <form action="{{ path('app_login') }}" method="post">
-                                                <input type="text" name="_username" placeholder="Nom d'utilisateur" value="{{ last_username }}">
-                                                <input type="password" name="_password" placeholder="Mot de passe">
-                                                <div class="button-box">
-                                                    <div class="login-toggle-btn">
-                                                        <input type="checkbox" name="_remember_me">
-                                                        <label>Se souvenir de moi</label>
-                                                        <a href="#">Mot de passe oublié ?</a>
-                                                    </div>
-                                                    <button type="submit"><span>Connexion</span></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="lg2" class="tab-pane">
-                                    <div class="login-form-container">
-                                        <div class="login-register-form">
-                                            <form action="{{ path('app_register') }}" method="post">
-                                                <input type="text" name="user_name" placeholder="Nom d'utilisateur">
-                                                <input type="password" name="user_password" placeholder="Mot de passe">
-                                                <input name="user_email" placeholder="Email" type="email">
-                                                <div class="button-box">
-                                                    <button type="submit"><span>S'inscrire</span></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+    <div class="login-form-container">
+        <div class="login-register-form">
+            {# Afficher les messages flash #}
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">{{ message }}</div>
+            {% endfor %}
+            
+            {# Gestion des erreurs de connexion #}
+            {% if error is defined and error %}
+                <div class="alert alert-danger">
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                </div>
+            {% endif %}
+            
+            <form action="{{ path('app_login') }}" method="post">
+                <input type="email" name="email" value="{{ last_username|default('') }}" placeholder="Email" required autofocus>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                
+                <div class="button-box">
+                    <div class="login-toggle-btn">
+                        <input type="checkbox" name="_remember_me" id="remember_me">
+                        <label for="remember_me">Se souvenir de moi</label>
+                        <a href="#">Mot de passe oublié ?</a>
+                    </div>
+                    <button type="submit"><span>Connexion</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+                               <div id="lg2" class="tab-pane">
+    <div class="login-form-container">
+        <div class="login-register-form">
+            {{ form_start(registrationForm) }}
+                {{ form_row(registrationForm.email, {
+                    'attr': {'placeholder': 'Email'}
+                }) }}
+                {{ form_row(registrationForm.plainPassword, {
+                    'label': 'Mot de passe',
+                    'attr': {'placeholder': 'Mot de passe'}
+                }) }}
+                
+
+                
+                <div class="button-box">
+                    <button type="submit"><span>S'inscrire</span></button>
+                </div>
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
+</div>
                             </div>
                         </div>
                     </div>
@@ -223,7 +242,7 @@
                                 <div class="footer-info-wrapper">
                                     <div class="footer-logo">
                                         <a href="{{ path('app_home') }}">
-                                            <img src="{{ asset('assets/img/logo/erasebg-transformed.png') }}" height="60" alt="">
+                                            <img src="{{ asset('assets/img/logo/perfectdogstore.png') }}" height="60" alt="">
                                         </a>
                                     </div>
                                     <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
@@ -285,7 +304,7 @@
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
         <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
-        <script src="{{ asset('assets/js/elevatezoom.js') }}"></script>
+     <!--   <script src="{{ asset('assets/js/elevatezoom.js') }}"></script> -->
         <script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
         <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
         <script src="{{ asset('assets/js/plugins.js') }}"></script>
