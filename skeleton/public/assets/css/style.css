@@ -4750,3 +4750,7 @@ blockquote.importent-title {
 .blog-dec-tags ul li:last-child::after {
     display: none;
 }
+/*----------------------------------------------------------------------------------*/
+.img-chien{
+    height: 400px;
+}
