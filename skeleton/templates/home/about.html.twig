@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Perfect Dog Store - À propos</title>
+        <meta name="description" content="">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}">
+
+        <!-- all css here -->
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/simple-line-icons.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+        <script src="{{ asset('assets/js/vendor/modernizr-3.11.7.min.js') }}"></script>
+    </head>
+    <body>
+        <header class="header-area">
+            <div class="header-top theme-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="welcome-area">
+                                <p>Bienvenue sur Perfect Dog Store</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12">
+                            <div class="account-curr-lang-wrap f-right">
+                                <ul>
+                                    <li class="top-hover"><a href="#">Euro (Eu)</a></li>
+                                    <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/fr.png') }}"> Français <i class="icon-arrow-down"></i></a>
+                                        <ul>
+                                            <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/bl.jpg') }}">Bengali</a></li>
+                                            <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/ar.jpg') }}">Arabe</a></li>
+                                            <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/in.jpg') }}">Hindi</a></li>
+                                            <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/sp.jpg') }}">Espagnol</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom transparent-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
+                            <div class="logo pt-39">
+                                <a href="{{ path('app_home') }}"><img alt="" src="{{ asset('assets/img/logo/erasebg-transformed.png') }}" height="60"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-7 d-none d-lg-block relative">
+                            <div class="main-menu text-center">
+                                <nav>
+                                    <ul>
+                                        <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                                        <li class="mega-menu-position"><a href="{{ path('app_shop_details') }}">Nourriture</a></li>
+                                        <li><a href="#">Accessoires</a></li>
+                                        <li><a href="about-us.html">À propos</a></li>
+                                        <li><a href="contact.html">Contactez-nous</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-7 relative">
+                            <div class="search-login-cart-wrapper">
+                                <div class="header-search same-style">
+                                    <button class="search-toggle">
+                                        <i class="icon-magnifier s-open"></i>
+                                        <i class="ti-close s-close"></i>
+                                    </button>
+                                    <div class="search-content">
+                                        <form action="#">
+                                            <input type="text" placeholder="Rechercher">
+                                            <button>
+                                                <i class="icon-magnifier"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="header-login same-style">
+                                    <a href="{{ path('app_login') }}"><i class="icon-user icons"></i></a>
+                                </div>
+                                <div class="header-cart same-style">
+                                    <button class="icon-cart">
+                                        <i class="icon-handbag"></i>
+                                        <span class="count-style">02</span>
+                                    </button>
+                                    <div class="shopping-cart-content">
+                                        <ul>
+                                            <li class="single-shopping-cart">
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="" src="{{ asset('assets/img/cart/cart-1.jpg') }}"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="#">Nourriture Calcium pour Chien</a></h4>
+                                                    <h6>Qté: 02</h6>
+                                                    <span>260,00€</span>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="ti-close"></i></a>
+                                                </div>
+                                            </li>
+                                            <li class="single-shopping-cart">
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="" src="{{ asset('assets/img/cart/cart-2.jpg') }}"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="#">Nourriture Calcium pour Chien</a></h4>
+                                                    <h6>Qté: 02</h6>
+                                                    <span>260,00€</span>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="ti-close"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="shopping-cart-total">
+                                            <h4>Livraison : <span>20,00€</span></h4>
+                                            <h4>Total : <span class="shop-total">260,00€</span></h4>
+                                        </div>
+                                        <div class="shopping-cart-btn">
+                                            <a href="cart.html">voir le panier</a>
+                                            <a href="checkout.html">paiement</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-area electro-menu d-md-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
+                            <div class="mobile-menu">
+                                <nav id="mobile-menu-active">
+                                    <ul class="menu-overflow">
+                                        <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                                        <li><a href="{{ path('app_shop_details') }}">Nourriture</a></li>
+                                        <li><a href="#">Accessoires</a></li>
+                                        <li><a href="about-us.html">À propos</a></li>
+                                        <li><a href="contact.html">Contactez-nous</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url({{ asset('assets/img/banner/banner-2.jpg') }});">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <h2>À propos</h2>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <div class="about-us-area pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="about-us-img pr-30 wow fadeInLeft">
+                            <img src="{{ asset('assets/img/banner/banner-3.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 d-flex align-items-center">
+                        <div class="about-us-content">
+                            <h2>Perfect Dog Store</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="about-us-list">
+                                <ul>
+                                    <li>There are many variations of passages</li>
+                                    <li>Contrary to popular belief, is not simply</li>
+                                    <li>But I must explain to you how all this mistaken</li>
+                                </ul>
+                            </div>
+                            <div class="about-us-btn">
+                                <a class="btn-style" href="#">CONTACT US</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-count-area pb-70 pt-100 gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <div class="single-count mb-30 text-center">
+                            <h2 class="count">18</h2>
+                            <span>Years in Business</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <div class="single-count mb-30 text-center">
+                            <h2 class="count">290</h2>
+                            <span>Happy People</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <div class="single-count mb-30 text-center">
+                            <h2 class="count">24</h2>
+                            <span>Billion Sales</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <div class="single-count mb-30 text-center">
+                            <h2 class="count">17</h2>
+                            <span>Award Winning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-area pt-90 pb-70 bg-img" style="background-image:url({{ asset('assets/img/banner/banner-shop.png') }});">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 ms-auto me-auto">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-text-slider text-center">
+                                <div class="sin-testiText">
+                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
+                                </div>
+                                <div class="sin-testiText">
+                                    <p>Il existe de nombreuses variations de passages de Lorem Ipsum, mais la majorité a subi une altération sous une forme ou une autre, par injection d'humour ou par des mots aléatoires qui ne ressemblent pas à une vraie langue....</p>
+                                </div>
+                                <div class="sin-testiText">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <div class="sin-testiText">
+                                    <p>Il existe de nombreuses variations de passages de Lorem Ipsum, mais la majorité a subi une altération sous une forme ou une autre, par injection d'humour ou par des mots aléatoires qui ne ressemblent pas à une vraie langue....</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-image-slider text-center">
+                                <div class="sin-testiImage">
+                                    <img src="{{ asset('assets/img/testi/3.jpg') }}" alt="">
+                                    <h3>Robiul Islam</h3>
+                                    <h5>Client</h5>
+                                </div>
+                                <div class="sin-testiImage">
+                                    <img src="{{ asset('assets/img/testi/4.jpg') }}" alt="">
+                                    <h3>Robiul Islam</h3>
+                                    <h5>Client</h5>
+                                </div>
+                                <div class="sin-testiImage">
+                                    <img src="{{ asset('assets/img/testi/3.jpg') }}" alt="">
+                                    <h3>F. H. Shuvo</h3>
+                                    <h5>Développeur</h5>
+                                </div>
+                                <div class="sin-testiImage">
+                                    <img src="{{ asset('assets/img/testi/5.jpg') }}" alt="">
+                                    <h3>T. T. Rayed</h3>
+                                    <h5>PDG</h5>
+                                </div>
+                            </div>
+                            <div class="testimonial-shap">
+                                <img src="{{ asset('assets/img/icon-img/testi-shap.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team-area pt-95 pb-70">
+            <div class="container">
+                <div class="section-title text-center mb-55">
+                    <h2>Notre Équipe</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team-wrapper mb-30">
+                            <div class="team-img">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/team/team-1.jpg') }}" alt="">
+                                </a>
+                                <div class="team-social">
+                                    <a href="#">
+                                        <i class="ti-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-pinterest"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-twitter-alt"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>Adam Jonson</h4>
+                                <span>Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team-wrapper mb-30">
+                            <div class="team-img">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/team/team-2.jpg') }}" alt="">
+                                </a>
+                                <div class="team-social">
+                                    <a href="#">
+                                        <i class="ti-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-pinterest"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-twitter-alt"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>Rose Evans</h4>
+                                <span>Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team-wrapper mb-30">
+                            <div class="team-img">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/team/team-3.jpg') }}" alt="">
+                                </a>
+                                <div class="team-social">
+                                    <a href="#">
+                                        <i class="ti-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-pinterest"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-twitter-alt"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>Bruce Cole</h4>
+                                <span>Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team-wrapper mb-30">
+                            <div class="team-img">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/team/team-4.jpg') }}" alt="">
+                                </a>
+                                <div class="team-social">
+                                    <a href="#">
+                                        <i class="ti-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-pinterest"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-twitter-alt"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ti-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h4>Debra Lane</h4>
+                                <span>Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-area">
+            <div class="footer-top pt-80 pb-50 gray-bg-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="footer-widget mb-30">
+                                <div class="footer-info-wrapper">
+                                    <div class="footer-logo">
+                                        <a href="{{ path('app_home') }}">
+                                            <img src="{{ asset('assets/img/logo/erasebg-transformed.png') }}" height="60" alt="">
+                                        </a>
+                                    </div>
+                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
+                                    <div class="social-icon">
+                                        <ul>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/fb.png') }}" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/instagram.png') }}" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/snapchat.png') }}" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/tiktok.png') }}" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/web.png') }}" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="footer-widget mb-30 pl-50">
+                                <h4 class="footer-title">LIENS UTILES</h4>
+                                <div class="footer-content">
+                                    <ul>
+                                        <li><a href="contact.html">Contactez-nous</a></li>
+                                        <li><a href="#">Site perfect-bull-Kennel</a></li>
+                                        <li><a href="#">Conditions Générales de Ventes</a></li>
+                                        <li><a href="#">Retours & Remboursements</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 col-md-6 col-sm-6">
+                            <div class="footer-widget mb-30 pl-70">
+                                <h4 class="footer-title">AIDES</h4>
+                                <div class="footer-content">
+                                    <ul>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Suivi des commandes</a></li>
+                                        <li><a href="#">Retours</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom gray-bg-3 pt-17 pb-15">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright text-center">
+                                <p>Copyright © <a href="{{ path('app_home') }}">Perfect Dog Store</a> Tous droits réservés.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- all js here -->
+        <script src="{{ asset('assets/js/vendor/jquery-v1.12.4.min.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+        <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
+        <script src="{{ asset('assets/js/elevatezoom.js') }}"></script>
+        <script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
+        <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('assets/js/plugins.js') }}"></script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
+    </body>
+</html>
