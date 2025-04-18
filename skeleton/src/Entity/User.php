@@ -21,11 +21,25 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180)]
     private ?string $email = null;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private ?string $firstName = null;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private ?string $lastName = null;
+
+    #[ORM\Column(type: 'string', length: 20, nullable: true)]
+    private ?string $telephone = null;
+
+    #[ORM\Column(type: 'string', length: 20, nullable: true)]
+    private ?string $fax = null;
+
+
     /**
      * @var list<string> The user roles
      */
     #[ORM\Column]
     private array $roles = [];
+
 
     /**
      * @var string The hashed password
@@ -49,6 +63,54 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
+    public function getFirstName(): ?string
+{
+    return $this->firstName;
+}
+
+public function setFirstName(?string $firstName): static
+{
+    $this->firstName = $firstName;
+
+    return $this;
+}
+
+public function getLastName(): ?string
+{
+    return $this->lastName;
+}
+
+public function setLastName(?string $lastName): static
+{
+    $this->lastName = $lastName;
+
+    return $this;
+}
+
+public function getTelephone(): ?string
+{
+    return $this->telephone;
+}
+
+public function setTelephone(?string $telephone): static
+{
+    $this->telephone = $telephone;
+
+    return $this;
+}
+
+public function getFax(): ?string
+{
+    return $this->fax;
+}
+
+public function setFax(?string $fax): static
+{
+    $this->fax = $fax;
+
+    return $this;
+}
 
     /**
      * A visual identifier that represents this user.
