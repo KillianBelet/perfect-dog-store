@@ -1444,7 +1444,7 @@ textarea:focus {
 /* scrollUp */
 
 #scrollUp {
-    background: #7e4c4f none repeat scroll 0 0;
+    background: #ff9900 none repeat scroll 0 0;
     bottom: 85px;
     color: #ffffff;
     cursor: pointer;
@@ -1821,7 +1821,7 @@ button.icon-cart span.count-style {
     color: #666;
 }
 .shopping-cart-total>h4 span.shop-total {
-    color: #7e4c4f;
+    color: #ff9900;
     font-weight: 500;
 }
 .shopping-cart-btn {
@@ -1846,8 +1846,8 @@ button.icon-cart span.count-style {
     transition: all 0.3s ease 0s;
 }
 .shopping-cart-btn a:hover {
-    background-color: #7e4c4f;
-    border: 2px solid #7e4c4f;
+    background-color: #ff9900;
+    border: 2px solid #ff9900;
     color: #fff;
 }
 
@@ -2573,7 +2573,7 @@ h4.footer-title {
     margin: 0;
 }
 .copyright > p a {
-    color: #7e4c4f;
+    color: #ff9900;
 }
 .copyright>p a:hover {
     text-decoration: underline;
@@ -3219,7 +3219,7 @@ input.cart-plus-minus-box {
     text-transform: capitalize;
 }
 .shorting-style>label span {
-    color: #7e4c4f;
+    color: #ff9900;
     font-weight: 500;
 }
 .shorting-style select {
@@ -3263,7 +3263,7 @@ input.cart-plus-minus-box {
     padding: 9px 10px 7px;
 }
 .view-mode>li.active a {
-    background-color: #7e4c4f;
+    background-color: #ff9900;
     color: #fff;
 }
 .product-list .product-content {
@@ -3369,7 +3369,7 @@ input.cart-plus-minus-box {
     margin-right: 20px;
 }
 .product-list-action-left a {
-    background-color: #7e4c4f;
+    background-color: #ff9900;
     color: #fff;
     display: inline-block;
     font-size: 14px;
@@ -3758,7 +3758,7 @@ input.cart-plus-minus-box {
 .product-quantity .qtybutton:hover,
 .table-content table td.product-name a:hover,
 .table-content table td.product-remove a:hover {
-    color: #7e4c4f;
+    color: #ff9900;
 }
 .product-quantity .dec.qtybutton {
     border-right: 1px solid #e5e5e5;
@@ -3817,7 +3817,7 @@ input.cart-plus-minus-box {
 .cart-shiping-update>a:hover,
 .cart-shiping-update>button:hover,
 .cart-clear>a:hover {
-    background-color: #7e4c4f;
+    background-color: #ff9900;
     color: #fff;
 }
 .cart-tax,
@@ -3894,7 +3894,7 @@ button.cart-btn-2,
 button.cart-btn-2:hover,
 .grand-totall>a:hover {
     color: #fff;
-    background-color: #7e4c4f;
+    background-color: #ff9900;
 }
 .discount-code input {
     height: 42px;
@@ -3924,7 +3924,7 @@ button.cart-btn-2:hover,
     margin: 12px 0 0;
 }
 .product-wishlist-cart > a {
-    background-color: #7e4c4f;
+    background-color: #ff9900;
     border-radius: 3px;
     color: #fff;
     font-size: 13px;
