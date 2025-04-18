@@ -2,20 +2,21 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Form\RegistrationFormType;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Symfony\Component\HttpFoundation\Request;
-use App\Form\RegistrationFormType;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
-use Doctrine\ORM\EntityManagerInterface;
-use App\Entity\User;
-use Symfony\Bridge\Twig\Mime\TemplatedEmail;
-use Symfony\Component\Mailer\MailerInterface;
 
 final class SecurityController extends AbstractController
 {
+    /*
     #[Route('/login', name: 'app_login')]
 public function login(AuthenticationUtils $authenticationUtils): Response
 {
@@ -25,7 +26,7 @@ public function login(AuthenticationUtils $authenticationUtils): Response
 
     // Récupère l'erreur de connexion s'il y en a une
     $error = $authenticationUtils->getLastAuthenticationError();
-    
+
     // Récupère le dernier nom d'utilisateur saisi
     $lastUsername = $authenticationUtils->getLastUsername();
 
@@ -95,5 +96,56 @@ public function login(AuthenticationUtils $authenticationUtils): Response
     {
         // Ce code ne sera jamais exécuté : Symfony intercepte cette route automatiquement
         throw new \Exception('Ne pas oublier d’activer le logout dans security.yaml');
+    }
+
+    */
+
+    #[Route('/login', name: 'app_login')]
+    public function login(AuthenticationUtils $authenticationUtils): Response
+    {
+        /*
+        if ($this->getUser()) {
+            return $this->redirectToRoute('app_home');
+        }
+    */
+        $error = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
+    
+        $registrationForm = $this->createForm(RegistrationFormType::class);
+    
+        return $this->render('security/login.html.twig', [
+            'last_username' => $lastUsername,
+            'error' => $error,
+            'registrationForm' => $registrationForm->createView(),
+        ]);
+    }
+
+    #[Route('/register', name: 'app_register')]
+    public function register(Request $request, UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $entityManager): Response
+    {
+        $form = $this->createForm(RegistrationFormType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $user = $form->getData();
+            $hashedPassword = $passwordHasher->hashPassword($user, $form->get('plainPassword')->getData());
+            $user->setPassword($hashedPassword);
+
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            $this->addFlash('success', 'Votre compte a été créé avec succès.');
+            return $this->redirectToRoute('app_login');
+        }
+
+        return $this->render('security/register.html.twig', [
+            'registrationForm' => $form->createView(),
+        ]);
+    }
+
+    #[Route(path: '/logout', name: 'app_logout')]
+    public function logout(): void
+    {
+        throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 }
