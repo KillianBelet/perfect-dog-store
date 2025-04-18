@@ -60,10 +60,10 @@
                             <div class="main-menu text-center">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.html">Acceuil</a></li>
-                                        <li class="mega-menu-position"><a href="shop-page.html">Nourriture</a></li>
+                                        <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                                        <li class="mega-menu-position"><a href="{{ path('app_shop_details') }}">Nourriture</a></li>
                                         <li><a href="#">Accessoires</a></li>
-                                        <li><a href="about-us.html">À propos</a></li>
+                                        <li><a href="{{ path('app_about') }}">À propos</a></li>
                                         <li><a href="contact.html">Contactez-nous</a></li>
                                     </ul>
                                 </nav>
@@ -127,7 +127,7 @@
                                             <h4>Total : <span class="shop-total">$260.00</span></h4>
                                         </div>
                                         <div class="shopping-cart-btn">
-                                            <a href="cart.html">view cart</a>
+                                            <a href="{{ path('app_panier') }}">Voir le panier</a>
                                             <a href="checkout.html">checkout</a>
                                         </div>
                                     </div>
