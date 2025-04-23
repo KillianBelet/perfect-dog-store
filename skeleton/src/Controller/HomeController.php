@@ -37,6 +37,21 @@ final class HomeController extends AbstractController
         ]);
     }
 
+    #[Route('/wishlist', name: 'app_wishlist')]
+    public function wishlist(): Response
+    {
+
+       $categorieRepository = $this->categorieRepository->findAll();
+       $produitRepository = $this->produitRepository->findLatestProducts();
+
+
+        return $this->render('home/index.html.twig', [
+            'controller_name' => 'HomeController',
+            'produitList' => $produitRepository,
+            'categorieList' => $categorieRepository
+        ]);
+    }
+
     #[Route('/contact', name: 'app_contact')]
     public function contact(): Response
     {
