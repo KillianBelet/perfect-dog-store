@@ -3958,7 +3958,7 @@ h5.panel-title a {
     position: relative;
 }
 h5.panel-title a:hover {
-    color: #7e4c4f;
+    color: #ff9900;
 }
 h5.panel-title a::before {
     color: #666666;
@@ -3984,7 +3984,7 @@ h5.panel-title a.collapsed::before {
     display: none;
 }
 h5.panel-title span {
-    background-color: #7e4c4f;
+    background-color: #ff9900;
     color: #fff;
     font-size: 15px;
     height: 42px;
@@ -4045,7 +4045,7 @@ h5.panel-title span {
 }
 .checkout-btn:hover,
 .billing-btn>button:hover {
-    background-color: #7e4c4f;
+    background-color: #ff9900;
     color: #fff;
 }
 .checkout-login>form {
@@ -4192,11 +4192,11 @@ h5.panel-title span {
     text-transform: uppercase;
 }
 .billing-back>a:hover {
-    color: #7e4c4f;
+    color: #ff9900;
 }
 .billing-back>a i {
     font-size: 18px;
-    color: #7e4c4f;
+    color: #ff9900;
 }
 .shipping-info-2>span {
     display: block;
