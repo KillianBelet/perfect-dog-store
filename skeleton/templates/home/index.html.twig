@@ -460,18 +460,18 @@
                             <div class="footer-widget mb-30">
                                 <div class="footer-info-wrapper">
                                     <div class="footer-logo">
-                                        <a href="#">
-                                            <img src="assets/img/logo/perfectdogstore.png" height="60" alt="">
+                                        <a href="{{ path('app_home') }}">
+                                            <img src="{{ asset('assets/img/logo/perfectdogstore.png') }}" height="60" alt="">
                                         </a>
                                     </div>
                                     <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
                                     <div class="social-icon">
                                         <ul>
-                                            <li><a href="#"><img src="assets/img/icon-img/fb.png" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/icon-img/instagram.png" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/icon-img/snapchat.png" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/icon-img/tiktok.png" alt=""></li>
-                                            <li><a href="#"><img src="assets/img/icon-img/web.png" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/fb.png') }}" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/instagram.png') }}" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/snapchat.png') }}" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/tiktok.png') }}" alt=""></a></li>
+                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/web.png') }}" alt=""></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -482,9 +482,9 @@
                                 <h4 class="footer-title">LIENS UTILES</h4>
                                 <div class="footer-content">
                                     <ul>
-                                        <li><a href="#">Contactez-nous</a></li>
+                                        <li><a href="contact.html">Contactez-nous</a></li>
                                         <li><a href="#">Site perfect-bull-Kennel</a></li>
-                                        <li><a href="#">Conditions Général de Ventes</a></li>
+                                        <li><a href="#">Conditions Générales de Ventes</a></li>
                                         <li><a href="#">Retours & Remboursements</a></li>
                                     </ul>
                                 </div>
@@ -502,30 +502,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="footer-widget">
-                                <div class="newsletter-wrapper">
-                                    <p>S'abonner à la newsletter<p>
-                                    <div class="newsletter-style">
-                                        <div id="mc_embed_signup" class="subscribe-form">
-                                            <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                                <div id="mc_embed_signup_scroll" class="mc-form">
-                                                    <input type="email" value="" name="EMAIL" class="email" placeholder="E-mail" required>
-                                                    real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                                                    <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                                    <div class="clear"><input type="submit" value="S'abonner" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="payment-img">
-                                    <a href="index.html">
-                                        <img src="assets/img/icon-img/payment.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -534,13 +510,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="copyright text-center">
-                                <p>Copyright © <a href="#">perfect-dog-store<a> Tous droits réserver.</p>
+                                <p>Copyright © <a href="{{ path('app_home') }}">Perfect Dog Store</a> Tous droits réservés.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-		</footer>
+        </footer>
 		<!-- modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">

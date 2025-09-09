@@ -1464,7 +1464,7 @@ textarea:focus {
 
 /* button */
 .btn-style {
-    background-color: #7e4c4f;
+    background-color: #df5c39;
     border-radius: 50px;
     color: #fff;
     display: inline-block;
@@ -4477,9 +4477,9 @@ h5.panel-title span {
     padding: 40px 15px 34px;
 }
 .contact-info-icon i {
-    border: 2px solid #7e4c4f;
+    border: 2px solid #ff9900;
     border-radius: 50px;
-    color: #7e4c4f;
+    color: #ff9900;
     display: inline-block;
     font-size: 30px;
     height: 60px;
@@ -4488,8 +4488,8 @@ h5.panel-title span {
     width: 60px;
 }
 .contact-info-wrapper:hover .contact-info-icon i {
-    border: 2px solid #7e4c4f;
-    background-color: #7e4c4f;
+    border: 2px solid #ff9900;
+    background-color: #ff9900;
     color: #fff;
 }
 .contact-info-content h4 {
@@ -4541,7 +4541,7 @@ h5.panel-title span {
     padding: 20px 20px;
 }
 .submit.btn-style {
-    background-color: #7e4c4f;
+    background-color: #df5c39;
     border: medium none;
     cursor: pointer;
     margin-top: 30px;
