@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Panier;
 use App\Repository\CategorieRepository;
 use App\Repository\ProduitRepository;
+use App\Repository\PanierRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -11,11 +13,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Produit;
+use App\Services\StripePayment;
 
 final class HomeController extends AbstractController
 {
     public function __Construct(private CategorieRepository $categorieRepository,
     private ProduitRepository $produitRepository,
+    private PanierRepository $panierepository,
     private PaginatorInterface $paginator,
     private EntityManagerInterface $entityManager ){
 
@@ -28,12 +32,14 @@ final class HomeController extends AbstractController
 
        $categorieRepository = $this->categorieRepository->findAll();
        $produitRepository = $this->produitRepository->findLatestProducts();
+      
 
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'produitList' => $produitRepository,
-            'categorieList' => $categorieRepository
+            'categorieList' => $categorieRepository,
+            $produitRepository,
         ]);
     }
 
@@ -97,6 +103,40 @@ final class HomeController extends AbstractController
             'categorieList' => $categories
         ]);
     }
+
+
+    #[Route('/payment', name: 'app_shop_payment')]
+    public function shopPayment(StripePayment $stripePayment): Response
+    {
+        $user = $this->getUser();
+        $panier = $this->panierepository->findOneBy(['user' => $user]);
+
+        if (!$panier || empty($panier->getProduits())) {
+            $this->addFlash('error', 'Votre panier est vide.');
+            return $this->redirectToRoute('app_panier');
+        }
+
+        // Crée une session Stripe
+        $session = $stripePayment->createCheckoutSession($panier);
+
+        // Redirection vers Stripe Checkout
+        return $this->redirect($session->url, 303);
+    }
+
+
+    #[Route('/success', name: 'app_payment_success')]
+    public function paymentSuccess(): Response
+    {
+        return $this->render('payment/success.html.twig');
+    }
+
+    #[Route('/cancel', name: 'app_payment_cancel')]
+    public function paymentCancel(): Response
+    {
+        return $this->render('payment/cancel.html.twig');
+    }
+
+    
 
     #[Route('/search', name: 'app_search')]
     public function search(Request $request): Response

@@ -162,7 +162,7 @@
     /*--------------------------
 	 Zoom
 	---------------------------- */	
-	$("#zoompro").elevateZoom({
+	$("#zoompro").elevatezoom({
 		gallery : "gallery",
 		galleryActiveClass: "active",
 		zoomWindowWidth:300,

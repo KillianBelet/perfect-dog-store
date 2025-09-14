@@ -87,7 +87,11 @@
                                     </div>
                                 </div>
                                 <div class="header-login same-style">
-                                    <a href="{{ path('app_login') }}"><i class="icon-user icons"></i></a>
+                                    {% if app.user %}
+                                        <a href="{{ path('app_account') }}"><i class="icon-user icons"></i></a>
+                                    {% else %}
+                                        <a href="{{ path('app_register') }}"><i class="icon-user icons"></i></a>
+                                    {% endif %}
                                 </div>
                                 <div class="header-cart same-style">
                                     <button class="icon-cart">
