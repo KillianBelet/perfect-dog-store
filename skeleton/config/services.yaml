@@ -23,7 +23,7 @@ services:
 
     App\Services\UpsShipping:
         arguments:
-            $upsAccessKey: '%ups_access_key%'
-            $upsUsername: '%ups_username%'
-            $upsPassword: '%ups_password%'
-            $upsAccountNumber: '%ups_account_number%'        
+            $accessKey: '%ups_access_key%'
+            $username: '%ups_username%'
+            $password: '%ups_password%'
+            $accountNumber: '%ups_account_number%'
