@@ -1,646 +1,480 @@
 <!doctype html>
 <html class="no-js" lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Perfect-dog-store</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/logo/perfectdogstore.png') }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Perfect-dog-store</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- all css here -->
-        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/simple-line-icons.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-        <script src="{{ asset('assets/js/vendor/modernizr-3.11.7.min.js') }}"></script>
-    </head>
-    <body>
-        <header class="header-area">
-            <div class="header-top theme-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="welcome-area">
-                                <p>Bienvenue sur Perfect Dog Store</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8 col-12">
-                            <div class="account-curr-lang-wrap f-right">
-                                <ul>
-                                    <li class="top-hover"><a href="#">Euro (Eu) <i class="icon-arrow-down"></i></a>
-                                        <ul>
-                                            <li><a href="#">Taka (BDT)</a></li>
-                                            <li><a href="#">Riyal (SAR)</a></li>
-                                            <li><a href="#">Roupie (INR)</a></li>
-                                            <li><a href="#">Dirham (AED)</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/fr.png') }}"> Français <i class="icon-arrow-down"></i></a>
-                                        <ul>
-                                            <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/bl.jpg') }}">Bengali </a></li>
-                                            <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/ar.jpg') }}">Arabe</a></li>
-                                            <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/in.jpg') }}">Hindi </a></li>
-                                            <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/sp.jpg') }}">Espagnol</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-bottom transparent-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
-                            <div class="logo pt-39">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/logo/perfectdogstore.png') }}">
 
-                                <a href="{{ path('app_home') }}"><img alt="" src="{{ asset('assets/img/logo/perfectdogstore.png') }}" height="60"></a>
-
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-7 d-none d-lg-block relative">
-                            <div class="main-menu text-center">
-                                <nav>
-                                    <ul>
-                                        <li><a href="{{ path('app_home') }}">ACCUEIL</a>
-                                            
-                                        </li>
-                                        <li class="mega-menu-position"><a href="{{ path('app_shop_details') }}">Nourriture</a>
-                                        <li class="mega-menu-position"><a href="{{ path('app_shop_details') }}">Accessoires</a>
-                                        </li>
-                                        
-                                        
-                                        <li><a href="{{ path('app_about')}}">À PROPOS</a></li>
-                                        <li><a href="{{ path('app_contact')}}">contactez-nous</a></li>
-
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-7 relative">
-                            <div class="search-login-cart-wrapper">
-                                <div class="header-search same-style">
-                                    <button class="search-toggle">
-                                        <i class="icon-magnifier s-open"></i>
-                                        <i class="ti-close s-close"></i>
-                                    </button>
-                                    <div class="search-content">
-                                        <form action="#">
-                                            <input type="text" placeholder="Rechercher">
-                                            <button>
-                                                <i class="icon-magnifier"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="header-login same-style">
-                                    <a href="login-register.html"><i class="icon-user icons"></i></a>
-                                </div>
-                                <div class="header-cart same-style">
-                                    <button class="icon-cart">
-                                        <i class="icon-handbag"></i>
-                                        <span class="count-style">02</span>
-                                    </button>
-                                    <div class="shopping-cart-content">
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="{{ asset('assets/img/cart/cart-1.jpg') }}"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Nourriture Calcium pour Chien</a></h4>
-                                                    <h6>Qté: 02</h6>
-                                                    <span>260,00€</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="ti-close"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="{{ asset('assets/img/cart/cart-2.jpg') }}"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">Nourriture Calcium pour Chien</a></h4>
-                                                    <h6>Qté: 02</h6>
-                                                    <span>260,00€</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="ti-close"></i></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="shopping-cart-total">
-                                            <h4>Livraison : <span>20,00€</span></h4>
-                                            <h4>Total : <span class="shop-total">260,00€</span></h4>
-                                        </div>
-                                        <div class="shopping-cart-btn">
-                                            <a href="{{ path('app_panier') }}">voir le panier</a>
-                                            <a href="checkout.html">paiement</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mobile-menu-area electro-menu d-md-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
-                            <div class="mobile-menu">
-                                <nav id="mobile-menu-active">
-                                    <ul class="menu-overflow">
-                                        <li><a href="#">Accueil</a></li>
-                                        <li><a href="#">Nourriture</a></li>
-                                        <li><a href="#">Accessoires</a></li>
-                                        <li><a href="#">À propos</a></li>
-                                        <li><a href="contact.html">Contactez-nous</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="slider-area">
-            <div class="slider-active owl-dot-style owl-carousel">
-                <div class="single-slider pt-100 pb-100 yellow-bg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12 col-sm-7">
-                                <div class="slider-content slider-animated-1 pt-114">
-                                    <h3 class="animated">Nous gardons des animaux pour le plaisir.</h3>
-                                    <h1 class="animated">Nourriture & Vitamines <br>Pour tous les Animaux</h1>
-                                    <div class="slider-btn">
-                                        <a class="animated" href="product-details.html">ACHETER MAINTENANT</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12 col-sm-5">
-                                <div class="slider-single-img slider-animated-1">
-                                    <img class="animated" src="{{ asset('assets/img/slider/animals-1517642_640.jpg') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slider pt-100 pb-100 yellow-bg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                <div class="slider-content slider-animated-1 pt-114">
-                                    <h3 class="animated">Nous gardons des animaux pour le plaisir.</h3>
-                                    <h1 class="animated">Nourriture & Vitamines <br>Pour tous les Animaux</h1>
-                                    <div class="slider-btn">
-                                        <a class="animated" href="product-details.html">ACHETER MAINTENANT</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-5 col-12">
-                                <div class="slider-single-img slider-animated-1">
-                                    <img class="animated" src="{{ asset('assets/img/slider/slider-single-img-2.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="food-category food-category-col pt-100 pb-60">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <div class="single-food-category cate-padding-1 text-center mb-30">
-                            <div class="single-food-hover-2">
-                                <img src="{{ asset('assets/img/product/bulldog.jpg') }}" class="img-chien" alt="">
-                            </div>
-                            <div class="single-food-content">
-                                <h3>Nourriture pour Chiens</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <div class="single-food-category cate-padding-2 text-center mb-30">
-                            <div class="single-food-hover-2">
-                                <img src="{{ asset('assets/img/product/chatRoux.jpg') }}" class="img-chien" alt="">
-                            </div>
-                            <div class="single-food-content">
-                                <h3>Nourriture pour Chats</h3>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-<div class="product-area pt-95 pb-70 gray-bg">
+  <!-- all css here -->
+  <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/simple-line-icons.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+  <script src="{{ asset('assets/js/vendor/modernizr-3.11.7.min.js') }}"></script>
+</head>
+<body>
+<header class="header-area">
+  <div class="header-top theme-bg">
     <div class="container">
-        <div class="section-title text-center mb-55">
-           <!-- <h4>Les plus populaires</h4> -->
-            <h2>Produits Récents</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="welcome-area">
+            <p>Bienvenue sur Perfect Dog Store</p>
+          </div>
         </div>
+        <div class="col-lg-8 col-md-8 col-12">
+          <div class="account-curr-lang-wrap f-right">
+            <ul>
+              <li class="top-hover"><a href="#">Euro (Eu) <i class="icon-arrow-down"></i></a>
+                <ul>
+                  <li><a href="#">Taka (BDT)</a></li>
+                  <li><a href="#">Riyal (SAR)</a></li>
+                  <li><a href="#">Roupie (INR)</a></li>
+                  <li><a href="#">Dirham (AED)</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/fr.png') }}"> Français <i class="icon-arrow-down"></i></a>
+                <ul>
+                  <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/bl.jpg') }}">Bengali </a></li>
+                  <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/ar.jpg') }}">Arabe</a></li>
+                  <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/in.jpg') }}">Hindi </a></li>
+                  <li><a href="#"><img alt="drapeau" src="{{ asset('assets/img/icon-img/sp.jpg') }}">Espagnol</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom transparent-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
+          <div class="logo pt-39">
+            <a href="{{ path('app_home') }}"><img alt="Perfect Dog Store" src="{{ asset('assets/img/logo/perfectdogstore.png') }}" height="60"></a>
+          </div>
+        </div>
+        <div class="col-xl-8 col-lg-7 d-none d-lg-block relative">
+          <div class="main-menu text-center">
+            <nav>
+              <ul>
+                <li><a href="{{ path('app_home') }}">ACCUEIL</a></li>
+                <li class="mega-menu-position"><a href="{{ path('app_shop_details') }}">Nourriture</a></li>
+                <li class="mega-menu-position"><a href="{{ path('app_shop_details') }}">Accessoires</a></li>
+                <li><a href="{{ path('app_about') }}">À PROPOS</a></li>
+                <li><a href="{{ path('app_contact') }}">contactez-nous</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-7 relative">
+          <div class="search-login-cart-wrapper">
+            <div class="header-search same-style">
+              <button class="search-toggle">
+                <i class="icon-magnifier s-open"></i>
+                <i class="ti-close s-close"></i>
+              </button>
+              <div class="search-content">
+                <form action="#">
+                  <input type="text" placeholder="Rechercher">
+                  <button><i class="icon-magnifier"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="header-login same-style">
+                {% if app.user %}
+                    <a href="{{ path('app_account') }}"><i class="icon-user icons"></i></a>
+                {% else %}
+                    <a href="{{ path('app_register') }}"><i class="icon-user icons"></i></a>
+                {% endif %}
+            </div>
+            <div class="header-cart same-style">
+              <button class="icon-cart">
+                <i class="icon-handbag"></i>
+                <span class="count-style">{{ panier.count }}</span>
+              </button>
+              <div class="shopping-cart-content">
+                <ul>
+                    {% if panier.entity %}
+{% for panierProduit in panier.entity.produits %}
+    <li class="single-shopping-cart">
+        <div class="shopping-cart-img">
+            <a href="#"><img src="{{ asset(panierProduit.produit.thumbnail) }}" alt=""></a>
+        </div>
+        <div class="shopping-cart-title">
+            <h4><a href="#">{{ panierProduit.produit.name }}</a></h4>
+            <h6>Qté: {{ panierProduit.quantite }}</h6>
+            <span>{{ panierProduit.prix }} €</span>
+        </div>
+        <div class="shopping-cart-delete">
+            <a href="#"><i class="ti-close"></i></a>
+        </div>
+    </li>
+{% endfor %}
+                    {% else %}
+                        <li>Votre panier est vide</li>
+                    {% endif %}
+                </ul>
+                <div class="shopping-cart-total">
+                  <h4>Livraison : <span>20,00€</span></h4>
+                  <h4>Total : <span class="shop-total">0€</span></h4>
+                </div>
+                <div class="shopping-cart-btn">
+                  <a href="{{ path('app_panier') }}">voir le panier</a>
+                  <a href="checkout.html">paiement</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-area electro-menu d-md-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
+          <div class="mobile-menu">
+            <nav id="mobile-menu-active">
+              <ul class="menu-overflow">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Nourriture</a></li>
+                <li><a href="#">Accessoires</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="slider-area">
+  <div class="slider-active owl-dot-style owl-carousel">
+    <div class="single-slider pt-100 pb-100 yellow-bg">
+      <div class="container">
         <div class="row">
-            {% for produit in produitList %}
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                    <div class="product-wrapper mb-10">
-                        <div class="product-img">
-                                <a href="product-details.html">
-                                    <img src="{{ asset(produit.thumbnail) }}" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a title="Vue Rapide" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                    <i class="ti-plus"></i>
-                                </a>
-                                <a title="Ajouter au Panier" href="#">
-                                    <i class="ti-shopping-cart"></i>
-                                </a>
-                            </div>
-                            <div class="product-action-wishlist">
-                                <a title="Liste de souhaits" href="#">
-                                <!--    <i class="ti-heart"></i> -->
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h4><a href="product-details.html">{{ produit.name }}</a></h4>
-                            <div class="product-price">
-                                <span class="new">{{ produit.prix }}€</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+          <div class="col-lg-6 col-md-6 col-12 col-sm-7">
+            <div class="slider-content slider-animated-1 pt-114">
+              <h3 class="animated">Nous gardons des animaux pour le plaisir.</h3>
+              <h1 class="animated">Nourriture & Vitamines <br>Pour tous les Animaux</h1>
+              <div class="slider-btn">
+                <a class="animated" href="product-details.html">ACHETER MAINTENANT</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 col-sm-5">
+            <div class="slider-single-img slider-animated-1">
+              <img class="animated" src="{{ asset('assets/img/slider/animals-1517642_640.jpg') }}" alt="">
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="single-slider pt-100 pb-100 yellow-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-7 col-12">
+            <div class="slider-content slider-animated-1 pt-114">
+              <h3 class="animated">Nous gardons des animaux pour le plaisir.</h3>
+              <h1 class="animated">Nourriture & Vitamines <br>Pour tous les Animaux</h1>
+              <div class="slider-btn">
+                <a class="animated" href="product-details.html">ACHETER MAINTENANT</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-5 col-12">
+            <div class="slider-single-img slider-animated-1">
+              <img class="animated" src="{{ asset('assets/img/slider/slider-single-img-2.png') }}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-                </div>
-            </div>
+<div class="food-category food-category-col pt-100 pb-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <div class="single-food-category cate-padding-1 text-center mb-30">
+          <div class="single-food-hover-2">
+            <img src="{{ asset('assets/img/product/bulldog.jpg') }}" class="img-chien" alt="">
+          </div>
+          <div class="single-food-content">
+            <h3>Nourriture pour Chiens</h3>
+          </div>
         </div>
-        <!--
-        <div class="deal-area bg-img pt-95 pb-100">
-            <div class="container">
-                <div class="section-title text-center mb-50">
-                    <h4>Meilleur Produit</h4>
-                    <h2>Offre de la Semaine</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="deal-img wow fadeInLeft">
-                            <a href="#"><img src="{{ asset('assets/img/banner/banner-2.png') }}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="deal-content">
-                            <h3><a href="#">Nommez Votre Produit</a></h3>
-                            <div class="deal-pro-price">
-                                <span class="deal-old-price">16,00€ </span>
-                                <span> 10,00€</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, co adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita ullamco laboris nisi ut aliquip ex ea commodo </p>
-                            <div class="timer timer-style">
-                                <div data-countdown="2023/10/01"></div>
-                            </div>
-                            <div class="discount-btn mt-35">
-                                <a class="btn-style" href="#">ACHETER MAINTENANT</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="single-food-category cate-padding-2 text-center mb-30">
+          <div class="single-food-hover-2">
+            <img src="{{ asset('assets/img/product/chatRoux.jpg') }}" class="img-chien" alt="">
+          </div>
+          <div class="single-food-content">
+            <h3>Nourriture pour Chats</h3>
+          </div>
         </div>
-        -->
-		<div class="testimonial-area pt-90 pb-70 bg-img" style="background-image:url({{ asset('assets/img/banner/banner-index.png') }});">
-		    <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-text-slider text-center">
-                                <div class="sin-testiText">
-                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
-                                </div>
-                                <div class="sin-testiText">
-                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
-                                </div>
-                                <div class="sin-testiText">
-                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
-                                </div>
-                                <div class="sin-testiText">
-                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
-                                </div>
-                            </div>
-                            <div class="testimonial-image-slider text-center">
-                                <div class="sin-testiImage">
-                                    <img src="{{ asset('assets/img/testi/bonmascotaPlus.png') }}" alt="">
-                                    <h3>Bonmascota Plus</h3>
-                                    <h5></h5>
-                                </div>
-                                <div class="sin-testiImage">
-                                    <img src="{{ asset('assets/img/testi/bonmascotaextrem.png') }}" alt="">
-                                    <h3>Bonmascota Extrem</h3>
-                                    <h5></h5>
-                                </div>
-                                <div class="sin-testiImage">
-                                    <img src="{{ asset('assets/img/testi/bonmascotajunior.png') }}" alt="">
-                                    <h3>Bonmascota Junior</h3>
-                                    <h5></h5>
-                                </div>
-                                <div class="sin-testiImage">
-                                    <img src="{{ asset('assets/img/testi/bonmascotacompletcat.png') }}" alt="">
-                                    <h3>Bonmascota Complet Cat</h3>
-                                    <h5></h5>
-                                </div>
-                            </div>
-                            <div class="testimonial-shap">
-                                <img src="{{ asset('assets/img/icon-img/testi-shap.png') }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-		</div>
-		<!--<div class="service-area bg-img pt-100 pb-65">
-		    <div class="container">
-		        <div class="row">
-		            <div class="col-lg-4 col-md-4">
-		                <div class="service-content text-center mb-30 service-color-1">
-		                    <img src="{{ asset('assets/img/icon-img/shipping.png') }}" alt="">
-		                    <h4>LIVRAISON GRATUITE</h4>
-		                    <p>Livraison gratuite sur toutes les commandes </p>
-		                </div>
-		            </div>
-		            <div class="col-lg-4 col-md-4">
-		                <div class="service-content text-center mb-30 service-color-2">
-		                    <img src="{{ asset('assets/img/icon-img/support.png') }}" alt="">
-		                    <h4>SUPPORT EN LIGNE</h4>
-		                    <p>Support en ligne 24 heures sur 24</p>
-		                </div>
-		            </div>
-		            <div class="col-lg-4 col-md-4">
-		                <div class="service-content text-center mb-30 service-color-3">
-		                    <img src="{{ asset('assets/img/icon-img/money.png') }}" alt="">
-		                    <h4>RETOUR D'ARGENT</h4>
-		                    <p>Garantie de retour sous 5 jours</p>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>-->
-        <!--
-		<div class="blog-area pb-70">
-		    <div class="container">
-		        <div class="section-title text-center mb-60">
-                    <h4>Dernières Nouvelles</h4>
-                    <h2>De Notre Blog</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-1.jpg') }}"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>Par: <span>Admin</span></li>
-                                        <li>14 Sep, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-2.jpg') }}"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>Par: <span>Admin</span></li>
-                                        <li>14 Sep, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-3.jpg') }}"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>Par: <span>Admin</span></li>
-                                        <li>14 Sep, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-		    </div>
-		</div>
-        -->
-        <footer class="footer-area">
-            <div class="footer-top pt-80 pb-50 gray-bg-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30">
-                                <div class="footer-info-wrapper">
-                                    <div class="footer-logo">
-                                        <a href="#">
-                                            <img src="assets/img/logo/perfectdogstore.png" height="60" alt="">
-                                        </a>
-                                    </div>
-                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
-                                    <div class="social-icon">
-                                        <ul>
-                                            <li><a href="#"><img src="assets/img/icon-img/fb.png" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/icon-img/instagram.png" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/icon-img/snapchat.png" alt=""></a></li>
-                                            <li><a href="#"><img src="assets/img/icon-img/tiktok.png" alt=""></li>
-                                            <li><a href="#"><img src="assets/img/icon-img/web.png" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30 pl-50">
-                                <h4 class="footer-title">LIENS UTILES</h4>
-                                <div class="footer-content">
-                                    <ul>
-                                        <li><a href="#">Contactez-nous</a></li>
-                                        <li><a href="#">Site perfect-bull-Kennel</a></li>
-                                        <li><a href="#">Conditions Général de Ventes</a></li>
-                                        <li><a href="#">Retours & Remboursements</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-2 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30 pl-70">
-                                <h4 class="footer-title">AIDES</h4>
-                                <div class="footer-content">
-                                    <ul>
-                                        <li><a href="#">FAQ</a></li>
-                                        <li><a href="#">Suivi des commandes</a></li>
-                                        <li><a href="#">Retours</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="footer-widget">
-                                <div class="newsletter-wrapper">
-                                    <p>S'abonner à la newsletter<p>
-                                    <div class="newsletter-style">
-                                        <div id="mc_embed_signup" class="subscribe-form">
-                                            <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                                <div id="mc_embed_signup_scroll" class="mc-form">
-                                                    <input type="email" value="" name="EMAIL" class="email" placeholder="E-mail" required>
-                                                    real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                                                    <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                                    <div class="clear"><input type="submit" value="S'abonner" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="payment-img">
-                                    <a href="index.html">
-                                        <img src="assets/img/icon-img/payment.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom gray-bg-3 pt-17 pb-15">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="copyright text-center">
-                                <p>Copyright © <a href="#">perfect-dog-store<a> Tous droits réserver.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-		</footer>
-		<!-- modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="qwick-view-left">
-                    <div class="quick-view-learg-img">
-                        <div class="quick-view-tab-content tab-content">
-                            <div class="tab-pane active show fade" id="modal1" role="tabpanel">
-                                <img id="modalProductImage" src="" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quick-view-list nav" role="tablist">
-                        <a class="active" href="#modal1" data-bs-toggle="tab" role="tab">
-                            <img src="{{ asset('assets/img/quick-view/s1.jpg') }}" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="qwick-view-right">
-                    <div class="qwick-view-content">
-                        <h3 id="modalProductName"></h3>
-                        <div class="product-price">
-                            <span id="modalProductPrix"></span>
-                        </div>
-                        <div class="product-rating">
-                            <i class="icon-star theme-color"></i>
-                            <i class="icon-star theme-color"></i>
-                            <i class="icon-star theme-color"></i>
-                            <i class="icon-star"></i>
-                            <i class="icon-star"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                        <div class="quick-view-select">
-                            <div class="select-option-part">
-                                <label>Taille*</label>
-                                <select class="select">
-                                    <option value="">- Veuillez sélectionner -</option>
-                                    <option value="">XS</option>
-                                    <option value="">S</option>
-                                    <option value="">M</option>
-                                    <option value="">L</option>
-                                    <option value="">XL</option>
-                                    <option value="">XXL</option>
-                                </select>
-                            </div>
-                            <div class="select-option-part">
-                                <label>Couleur*</label>
-                                <select class="select">
-                                    <option value="">- Veuillez sélectionner -</option>
-                                    <option value="">Orange</option>
-                                    <option value="">Rose</option>
-                                    <option value="">Jaune</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="quickview-plus-minus">
-                            <div class="cart-plus-minus">
-                                <input type="text" value="2" name="qtybutton" class="cart-plus-minus-box">
-                            </div>
-                            <div class="quickview-btn-cart">
-                                <a class="btn-style" href="#">Ajouter au panier</a>
-                            </div>
-                            <div class="quickview-btn-wishlist">
-                            <!--    <a class="btn-hover" href="#"><i class="ti-heart"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
 
+<div class="product-area pt-95 pb-70 gray-bg">
+  <div class="container">
+    <div class="section-title text-center mb-55">
+      <h2>Produits Récents</h2>
+    </div>
+    <div class="row">
+      {% for produit in produitList %}
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+          <div class="product-wrapper mb-10">
+            <div class="product-img">
+              <a href="#">
+                <img src="{{ asset(produit.thumbnail) }}" alt="{{ produit.name }}">
+              </a>
+              <div class="product-action">
+              <a title="Vue Rapide"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                href="#"
+                data-product-id="{{ produit.id }}"
+                data-product-name="{{ produit.name }}"
+                data-product-image="{{ asset(produit.thumbnail) }}"
+                data-product-description="{{ produit.description }}"
+                data-product-price="{{ produit.prix }}">
+                <i class="ti-plus"></i>
+              </a>
+<form action="{{ path('app_panier_add', {id: produit.id}) }}" method="POST" style="display:inline;">
+  <input type="hidden" name="quantite" value="1">
+  <button type="submit" title="Ajouter au Panier" style="background:none;border:none;cursor:pointer;">
+    <i class="ti-shopping-cart"></i>
+  </button>
+</form>
+              </div>
+              <div class="product-action-wishlist">
+                <a title="Liste de souhaits" href="#"></a>
+              </div>
+            </div>
+            <div class="product-content">
+              <h4>{{ produit.name }}</h4>
+              <div class="product-price">
+                <span class="new">{{ produit.prix }}€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="testimonial-area pt-90 pb-70 bg-img" style="background-image:url({{ asset('assets/img/banner/banner-index.png') }});">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 ms-auto me-auto">
+        <div class="testimonial-wrap">
+          <div class="testimonial-text-slider text-center">
+            <div class="sin-testiText"><p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p></div>
+            <div class="sin-testiText"><p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p></div>
+            <div class="sin-testiText"><p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p></div>
+            <div class="sin-testiText"><p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p></div>
+          </div>
+          <div class="testimonial-image-slider text-center">
+            <div class="sin-testiImage">
+              <img src="{{ asset('assets/img/testi/bonmascotaPlus.png') }}" alt="">
+              <h3>Bonmascota Plus</h3>
+            </div>
+            <div class="sin-testiImage">
+              <img src="{{ asset('assets/img/testi/bonmascotaextrem.png') }}" alt="">
+              <h3>Bonmascota Extrem</h3>
+            </div>
+            <div class="sin-testiImage">
+              <img src="{{ asset('assets/img/testi/bonmascotajunior.png') }}" alt="">
+              <h3>Bonmascota Junior</h3>
+            </div>
+            <div class="sin-testiImage">
+              <img src="{{ asset('assets/img/testi/bonmascotacompletcat.png') }}" alt="">
+              <h3>Bonmascota Complet Cat</h3>
+            </div>
+          </div>
+          <div class="testimonial-shap">
+            <img src="{{ asset('assets/img/icon-img/testi-shap.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-area">
+  <div class="footer-top pt-80 pb-50 gray-bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="footer-widget mb-30">
+            <div class="footer-info-wrapper">
+              <div class="footer-logo">
+                <a href="#">
+                  <img src="{{ asset('assets/img/logo/perfectdogstore.png') }}" height="60" alt="">
+                </a>
+              </div>
+              <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
+              <div class="social-icon">
+                <ul>
+                  <li><a href="#"><img src="{{ asset('assets/img/icon-img/fb.png') }}" alt=""></a></li>
+                  <li><a href="#"><img src="{{ asset('assets/img/icon-img/instagram.png') }}" alt=""></a></li>
+                  <li><a href="#"><img src="{{ asset('assets/img/icon-img/snapchat.png') }}" alt=""></a></li>
+                  <li><a href="#"><img src="{{ asset('assets/img/icon-img/tiktok.png') }}" alt=""></a></li>
+                  <li><a href="#"><img src="{{ asset('assets/img/icon-img/web.png') }}" alt=""></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="footer-widget mb-30 pl-50">
+            <h4 class="footer-title">LIENS UTILES</h4>
+            <div class="footer-content">
+              <ul>
+                <li><a href="#">Contactez-nous</a></li>
+                <li><a href="#">Site perfect-bull-Kennel</a></li>
+                <li><a href="#">Conditions Général de Ventes</a></li>
+                <li><a href="#">Retours & Remboursements</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-2 col-md-6 col-sm-6">
+          <div class="footer-widget mb-30 pl-70">
+            <h4 class="footer-title">AIDES</h4>
+            <div class="footer-content">
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Suivi des commandes</a></li>
+                <li><a href="#">Retours</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- zone newsletter masquée -->
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom gray-bg-3 pt-17 pb-15">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="copyright text-center">
+            <p>Copyright © <a href="#">perfect-dog-store</a> Tous droits réserver.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- MODAL VUE RAPIDE (dynamique) -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="qwick-view-left">
+          <div class="quick-view-learg-img">
+            <div class="quick-view-tab-content tab-content">
+              <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                <img id="modalProductImage" src="" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="quick-view-list nav" role="tablist">
+            <a class="active" href="#modal1" data-bs-toggle="tab" role="tab">
+              <img src="{{ asset('assets/img/quick-view/s1.jpg') }}" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="qwick-view-right">
+          <div class="qwick-view-content">
+            <h3 id="modalProductName"></h3>
+            <div class="product-price"><span id="modalProductPrix"></span></div>
+            <div class="product-rating">
+              <i class="icon-star theme-color"></i>
+              <i class="icon-star theme-color"></i>
+              <i class="icon-star theme-color"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+            </div>
+            <!-- description dynamique -->
+            <p id="modalProductDescription"></p>
+
+            <!-- FORMULAIRE AJOUT PANIER -->
+            <form id="quickviewAddToCart" action="" method="POST" style="margin-top: 15px;">
+              <div class="quickview-plus-minus">
+                <div class="cart-plus-minus">
+                  <input type="number" name="quantite" value="1" min="1" class="cart-plus-minus-box">
+                </div>
+                <div class="quickview-btn-cart">
+                  <button type="submit" class="btn-style" style="cursor:pointer;">
+                    <i class="ti-shopping-cart"></i> Ajouter au panier
+                  </button>
+                </div>
+              </div>
+            </form>
+            <!-- /FORMULAIRE -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS: injection dynamique de la modale -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    var exampleModal = document.getElementById('exampleModal');
-    exampleModal.addEventListener('show.bs.modal', function (event) {
-        var button = event.relatedTarget;
-        var produitName = button.getAttribute('data-produit-name');
-        var produitImage = button.getAttribute('data-produit-image');
-        var produitPrix = button.getAttribute('data-produit-prix');
+  var exampleModal = document.getElementById('exampleModal');
+  if (!exampleModal) return;
 
-        var modal = exampleModal;
-        modal.querySelector('#modalProductName').textContent = produitName;
-        modal.querySelector('#modalProductImage').src = produitImage;
-        modal.querySelector('#modalProductPrix').textContent = produitPrix + '€';
-    });
+  exampleModal.addEventListener('show.bs.modal', function (event) {
+    var button = event.relatedTarget;
+    if (!button) return;
+
+    var id    = button.getAttribute('data-product-id');
+    var name  = button.getAttribute('data-product-name') || '';
+    var img   = button.getAttribute('data-product-image') || '';
+    var desc  = button.getAttribute('data-product-description') || '';
+    var price = button.getAttribute('data-product-price') || '';
+
+    // Injection dans la modale
+    exampleModal.querySelector('#modalProductName').textContent = name;
+    exampleModal.querySelector('#modalProductImage').src = img;
+    exampleModal.querySelector('#modalProductDescription').textContent = desc;
+    exampleModal.querySelector('#modalProductPrix').textContent = price + '€';
+
+    // Injection de l’URL dans le formulaire
+    var form = exampleModal.querySelector('#quickviewAddToCart');
+   form.action = "{{ path('app_panier_add', { id: 'ID_REPLACE' }) }}".replace('ID_REPLACE', id);
+
+  });
 });
+
 </script>
 
-		<!-- all js here -->
-        <script src="{{ asset('assets/js/vendor/jquery-v1.12.4.min.js') }}"></script>
-        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
-        <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
-        <script src="{{ asset('assets/js/elevetezoom.js') }}"></script>
-        <script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
-        <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins.js') }}"></script>
-        <script src="{{ asset('assets/js/main.js') }}"></script>
-    </body>
+<!-- all js here -->
+<script src="{{ asset('assets/js/vendor/jquery-v1.12.4.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+<script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
+<script src="{{ asset('assets/js/elevetezoom.js') }}"></script>
+<script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
+<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+</body>
 </html>

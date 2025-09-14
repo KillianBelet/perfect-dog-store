@@ -88,7 +88,11 @@
                                     </div>
                                 </div>
                                 <div class="header-login same-style">
-                                    <a href="mon-compte.html"><i class="icon-user icons"></i></a>
+                                    {% if app.user %}
+                                        <a href="{{ path('app_account') }}"><i class="icon-user icons"></i></a>
+                                    {% else %}
+                                        <a href="{{ path('app_register') }}"><i class="icon-user icons"></i></a>
+                                    {% endif %}
                                 </div>
                                 <div class="header-cart same-style">
                                     <button class="icon-cart">
@@ -234,7 +238,8 @@
                         <a class="addtocart-btn" title="Ajouter au panier" href="#"><i class="ion-bag"></i>Ajoutez au panier</a>
                     </div>
                     <div class="product-list-action-right">
-                        <a title="Liste de souhaits" href="#"> <!-- <i class="ti-heart"></i></a> -->
+                        <a title="Liste de souhaits" href="#"> 
+                        <!-- <i class="ti-heart"></i></a> -->
                         <a title="Vue Rapide"
                            data-bs-toggle="modal"
                            data-bs-target="#exampleModal"
@@ -438,6 +443,7 @@
                 </div>
             </div>
 		</footer>
+
 <!-- modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
@@ -452,14 +458,7 @@
                             <div class="tab-pane active show fade" id="modal1" role="tabpanel">
                                 <img id="modal-product-image" src="" alt="">
                             </div>
-                            <!-- Ajoutez d'autres onglets pour les images si nécessaire -->
                         </div>
-                    </div>
-                    <div class="quick-view-list nav" role="tablist">
-                        <a class="active" href="#modal1" data-bs-toggle="tab" role="tab">
-                            <img id="modal-product-thumb" src="" alt="">
-                        </a>
-                        <!-- Ajoutez d'autres miniatures pour les images si nécessaire -->
                     </div>
                 </div>
                 <div class="qwick-view-right">
@@ -468,46 +467,13 @@
                         <div class="product-price">
                             <span id="modal-product-price"></span> €
                         </div>
-                        <div class="product-rating">
-                            <i class="ion-star theme-color"></i>
-                            <i class="ion-star theme-color"></i>
-                            <i class="ion-star theme-color"></i>
-                            <i class="ion-star theme-color"></i>
-                            <i class="ion-star theme-color"></i>
-                        </div>
                         <p id="modal-product-description"></p>
-                        <div class="quick-view-select">
-                            <div class="select-option-part">
-                                <label>Taille*</label>
-                                <select class="select">
-                                    <option value="">- Veuillez sélectionner -</option>
-                                    <option value="">XS</option>
-                                    <option value="">S</option>
-                                    <option value="">M</option>
-                                    <option value="">L</option>
-                                    <option value="">XL</option>
-                                    <option value="">XXL</option>
-                                </select>
-                            </div>
-                            <div class="select-option-part">
-                                <label>Couleur*</label>
-                                <select class="select">
-                                    <option value="">- Veuillez sélectionner -</option>
-                                    <option value="">Orange</option>
-                                    <option value="">Rose</option>
-                                    <option value="">Jaune</option>
-                                </select>
-                            </div>
-                        </div>
                         <div class="quickview-plus-minus">
                             <div class="cart-plus-minus">
-                                <input type="text" value="1" name="qtybutton" class="cart-plus-minus-box">
+                                <input type="number" value="1" min="1" name="qtybutton" class="cart-plus-minus-box">
                             </div>
                             <div class="quickview-btn-cart">
-                                <a class="btn-style" href="#">ajouter au panier</a>
-                            </div>
-                            <div class="quickview-btn-wishlist">
-                                <a class="btn-hover" href="#"><i class="ti-heart"></i></a>
+                                <a class="btn-style" href="#">Ajouter au panier</a>
                             </div>
                         </div>
                     </div>
@@ -516,6 +482,7 @@
         </div>
     </div>
 </div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     var exampleModal = document.getElementById('exampleModal');
@@ -528,30 +495,11 @@ document.addEventListener('DOMContentLoaded', function () {
             var productDescription = button.getAttribute('data-product-description');
             var productPrice = button.getAttribute('data-product-price');
 
-            var modalProductName = exampleModal.querySelector('#modal-product-name');
-            var modalProductImage = exampleModal.querySelector('#modal-product-image');
-            var modalProductDescription = exampleModal.querySelector('#modal-product-description');
-            var modalProductPrice = exampleModal.querySelector('#modal-product-price');
-
-            if (modalProductName) modalProductName.textContent = productName;
-            if (modalProductImage) modalProductImage.src = productImage;
-            if (modalProductDescription) modalProductDescription.textContent = productDescription;
-            if (modalProductPrice) modalProductPrice.textContent = productPrice;
-
-                    console.error(productName);
-
-            // Déplacer le focus vers le bouton de fermeture de la modal
-            exampleModal.querySelector('.close').focus();
+            exampleModal.querySelector('#modal-product-name').textContent = productName;
+            exampleModal.querySelector('#modal-product-image').src = productImage;
+            exampleModal.querySelector('#modal-product-description').textContent = productDescription;
+            exampleModal.querySelector('#modal-product-price').textContent = productPrice;
         });
-
-        exampleModal.addEventListener('hidden.bs.modal', function (event) {
-            // Retourner le focus à l'élément qui a déclenché la modal
-            if (event.relatedTarget) {
-                event.relatedTarget.focus();
-            }
-        });
-    } else {
-        console.error("Modal element not found");
     }
 });
 </script>
