@@ -96,7 +96,7 @@
                 {% if app.user %}
                     <a href="{{ path('app_account') }}"><i class="icon-user icons"></i></a>
                 {% else %}
-                    <a href="{{ path('app_register') }}"><i class="icon-user icons"></i></a>
+                    <a href="{{ path('app_login') }}"><i class="icon-user icons"></i></a>
                 {% endif %}
             </div>
             <div class="header-cart same-style">
@@ -363,179 +363,6 @@
                 <li><a href="#">Retours</a></li>
               </ul>
             </div>
-<<<<<<< HEAD
-		</div>
-		<!--<div class="service-area bg-img pt-100 pb-65">
-		    <div class="container">
-		        <div class="row">
-		            <div class="col-lg-4 col-md-4">
-		                <div class="service-content text-center mb-30 service-color-1">
-		                    <img src="{{ asset('assets/img/icon-img/shipping.png') }}" alt="">
-		                    <h4>LIVRAISON GRATUITE</h4>
-		                    <p>Livraison gratuite sur toutes les commandes </p>
-		                </div>
-		            </div>
-		            <div class="col-lg-4 col-md-4">
-		                <div class="service-content text-center mb-30 service-color-2">
-		                    <img src="{{ asset('assets/img/icon-img/support.png') }}" alt="">
-		                    <h4>SUPPORT EN LIGNE</h4>
-		                    <p>Support en ligne 24 heures sur 24</p>
-		                </div>
-		            </div>
-		            <div class="col-lg-4 col-md-4">
-		                <div class="service-content text-center mb-30 service-color-3">
-		                    <img src="{{ asset('assets/img/icon-img/money.png') }}" alt="">
-		                    <h4>RETOUR D'ARGENT</h4>
-		                    <p>Garantie de retour sous 5 jours</p>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>-->
-        <!--
-		<div class="blog-area pb-70">
-		    <div class="container">
-		        <div class="section-title text-center mb-60">
-                    <h4>Dernières Nouvelles</h4>
-                    <h2>De Notre Blog</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-1.jpg') }}"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>Par: <span>Admin</span></li>
-                                        <li>14 Sep, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-2.jpg') }}"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>Par: <span>Admin</span></li>
-                                        <li>14 Sep, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-wrapper mb-30 gray-bg">
-                            <div class="blog-img hover-effect">
-                                <a href="blog-details.html"><img alt="" src="{{ asset('assets/img/blog/blog-3.jpg') }}"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>Par: <span>Admin</span></li>
-                                        <li>14 Sep, 2018</li>
-                                    </ul>
-                                </div>
-                                <h4><a href="blog-details.html">Lorem ipsum dolor amet cons adipisicing elit</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-		    </div>
-		</div>
-        -->
-        <footer class="footer-area">
-            <div class="footer-top pt-80 pb-50 gray-bg-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30">
-                                <div class="footer-info-wrapper">
-                                    <div class="footer-logo">
-                                        <a href="{{ path('app_home') }}">
-                                            <img src="{{ asset('assets/img/logo/perfectdogstore.png') }}" height="60" alt="">
-                                        </a>
-                                    </div>
-                                    <p>Offrez le meilleur à votre compagnon à quatre pattes avec notre sélection premium de nourriture pour animaux, livrée directement chez vous !</p>
-                                    <div class="social-icon">
-                                        <ul>
-                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/fb.png') }}" alt=""></a></li>
-                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/instagram.png') }}" alt=""></a></li>
-                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/snapchat.png') }}" alt=""></a></li>
-                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/tiktok.png') }}" alt=""></a></li>
-                                            <li><a href="#"><img src="{{ asset('assets/img/icon-img/web.png') }}" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30 pl-50">
-                                <h4 class="footer-title">LIENS UTILES</h4>
-                                <div class="footer-content">
-                                    <ul>
-                                        <li><a href="contact.html">Contactez-nous</a></li>
-                                        <li><a href="#">Site perfect-bull-Kennel</a></li>
-                                        <li><a href="#">Conditions Générales de Ventes</a></li>
-                                        <li><a href="#">Retours & Remboursements</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-2 col-md-6 col-sm-6">
-                            <div class="footer-widget mb-30 pl-70">
-                                <h4 class="footer-title">AIDES</h4>
-                                <div class="footer-content">
-                                    <ul>
-                                        <li><a href="#">FAQ</a></li>
-                                        <li><a href="#">Suivi des commandes</a></li>
-                                        <li><a href="#">Retours</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom gray-bg-3 pt-17 pb-15">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="copyright text-center">
-                                <p>Copyright © <a href="{{ path('app_home') }}">Perfect Dog Store</a> Tous droits réservés.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-		<!-- modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="qwick-view-left">
-                    <div class="quick-view-learg-img">
-                        <div class="quick-view-tab-content tab-content">
-                            <div class="tab-pane active show fade" id="modal1" role="tabpanel">
-                                <img id="modalProductImage" src="" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quick-view-list nav" role="tablist">
-                        <a class="active" href="#modal1" data-bs-toggle="tab" role="tab">
-                            <img src="{{ asset('assets/img/quick-view/s1.jpg') }}" alt="">
-                        </a>
-                    </div>
-=======
           </div>
         </div>
         <!-- zone newsletter masquée -->
@@ -592,7 +419,6 @@
               <div class="quickview-plus-minus">
                 <div class="cart-plus-minus">
                   <input type="number" name="quantite" value="1" min="1" class="cart-plus-minus-box">
->>>>>>> 64785836db50913132893e4e945a2166a1d85ac4
                 </div>
                 <div class="quickview-btn-cart">
                   <button type="submit" class="btn-style" style="cursor:pointer;">
